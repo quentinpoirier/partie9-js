@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+    integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+  <title>Exercice1 partie9 js</title>
+</head>
+
+<body>
+  <div class="content m-5">
+    <h1>Exercice 1</h1>
+    <p>A l'aide de la librairie cleave.js, créer un formulaire de paiement. Ajouter un champ nom et un champ prénom, un
+      champ numéro de téléphone, un champ date de commande et un champ carte bancaire.</p>
+    <form action="">
+      <div class="form-group">
+        <label for="name">Nom</label>
+        <input type="text" class="input-name" id="name" onkeyup="nameRegexCheck()">
+      </div>
+      <div class="form-group">
+        <label for="lastName">Prénom</label>
+        <input type="text" class="input-lastName" id="lastName" onkeyup="lastNameRegexCheck()">
+      </div>
+      <div class="form-group">
+        <label for="phoneNumber">Numéro de téléphone</label>
+        <input type="text" class="input-phoneNumber" id="phoneNumber">
+        <select name="countryName" id="countryName">
+          <option value="FR">FR</option>
+          <option value="GB">GB</option>
+          <option value="US">US</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <label for="date">Date de commande</label>
+        <input type="text" class="input-date" id="date">
+      </div>
+      <div class="form-group">
+        <label for="cb">Carte bancaire</label>
+        <input type="text" class="input-cb" id="cb">
+        <span id="cardType" class="text-secondary ml-2"></span>
+      </div>
+      <button type="button" class="btn btn-primary">Envoyer</button>
+    </form>
+  </div>
+
+
+  <!-- <script>
+    function checkName() {
+      let idName = document.getElementById('name');
+      let regexName = /^[a-zA-Zéèàùçêëï\-]+$/;
+      let errorName = document.getElementById('errorName');
+
+      if (regexName.test(idName.value)) {
+        console.log('nom valide');
+        idName.style.border = '2px solid green';
+        errorName.textContent = '';
+
+      } else {
+        console.log('nom invalide');
+        idName.style.border = '2px solid red';
+        errorName.textContent = 'erreur';
+      }
+    }
+
+    function checkFirstName() {
+      let idFirstName = document.getElementById('firstName');
+      let regexFirstName = /^[a-zA-Zéèàùçêëï\-]+$/;
+      let errorFirstName = document.getElementById('errorFirstName');
+
+      if (regexFirstName.test(idFirstName.value)) {
+        idFirstName.style.border = '2px solid green';
+        errorName.textContent = '';
+
+      } else {
+        idFirstName.style.border = '2px solid red';
+        errorFirstName.textContent = 'erreur';
+
+      }
+    }
+
+    var cleavePhone = new Cleave('.inputPhoneNumber', {
+      phone: true,
+      phoneRegionCode: '{country}'
+    });
+
+    var cleaveDate = new Cleave('.orderDate', {
+      date: true,
+      delimiter: '/',
+      datePattern: ['Y', 'm', 'd']
+    });
+
+    var cleaveCreditCard = new Cleave('.creditCard', {
+      creditCard: true,
+      onCreditCardTypeChanged: function (type) {}
+    });
+  </script>
+  <script src="js/phone-type-formatter.fr.js"></script> -->
+</body>
+
+</html>
